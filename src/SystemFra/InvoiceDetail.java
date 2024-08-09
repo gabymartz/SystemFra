@@ -1,20 +1,21 @@
 package SystemFra;
 
+// Clase InvoiceDetail (Detalle de Factura)
+
 public class InvoiceDetail {
     private String detailId;
-    private String invoiceId;
-    private String productId;
+    private Invoice invoice;
+    private Product product;
     private int quantity;
     private double subtotal;
 
-    public InvoiceDetail(String detailId, String invoiceId, String productId, int quantity, double subtotal) {
+    public InvoiceDetail(String detailId, Invoice invoice, Product product, int quantity, double subtotal) {
         this.detailId = detailId;
-        this.invoiceId = invoiceId;
-        this.productId = productId;
+        this.invoice = invoice;
+        this.product = product;
         this.quantity = quantity;
         this.subtotal = subtotal;
     }
-
 
     public String getDetailId() {
         return detailId;
@@ -23,18 +24,18 @@ public class InvoiceDetail {
         this.detailId = detailId;
     }
 
-    public String getInvoiceId() {
-        return invoiceId;
+    public Invoice getInvoice() {
+        return invoice;
     }
-    public void setInvoiceId(String invoiceId) {
-        this.invoiceId = invoiceId;
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
 
-    public String getProductId() {
-        return productId;
+    public Product getProduct() {
+        return product;
     }
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
     public int getQuantity() {

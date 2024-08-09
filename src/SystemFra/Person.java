@@ -1,6 +1,8 @@
 package SystemFra;
 
-public class Person {
+// Clase Person (Persona) - Clase base para Customer y Employee
+
+public abstract class Person {
     private String id;
     private String firstName;
     private String lastName;

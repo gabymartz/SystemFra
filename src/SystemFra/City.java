@@ -1,5 +1,7 @@
 package SystemFra;
 
+// Clase City (Ciudad)
+
 public class City {
     private String cityId;
     private String cityName;
@@ -9,11 +11,9 @@ public class City {
         this.cityName = cityName;
     }
 
-    // Getters and Setters
     public String getCityId() {
         return cityId;
     }
-
     public void setCityId(String cityId) {
         this.cityId = cityId;
     }

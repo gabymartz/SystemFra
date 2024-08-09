@@ -1,5 +1,7 @@
 package SystemFra;
 
+// Clase Customer (Cliente)
+
 public class Customer extends Person {
     private String address;
     private String phone;
@@ -24,3 +26,4 @@ public class Customer extends Person {
         this.phone = phone;
     }
 }
+

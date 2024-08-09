@@ -1,24 +1,28 @@
 package SystemFra;
 
 import java.util.Date;
+import java.util.List;
+
+// Clase Receipt (Recibo)
 
 public class Receipt {
     private String receiptId;
-    private String customerId;
-    private String employeeId;
-    private String branchId;
+    private Customer customer;
+    private Employee employee;
+    private Branch branch;
     private Date date;
     private double total;
+    private List<ReceiptDetail> details; // Relación con ReceiptDetail
 
-    public Receipt(String receiptId, String customerId, String employeeId, String branchId, Date date, double total) {
+    public Receipt(String receiptId, Customer customer, Employee employee, Branch branch, Date date, double total, List<ReceiptDetail> details) {
         this.receiptId = receiptId;
-        this.customerId = customerId;
-        this.employeeId = employeeId;
-        this.branchId = branchId;
+        this.customer = customer;
+        this.employee = employee;
+        this.branch = branch;
         this.date = date;
         this.total = total;
+        this.details = details;
     }
-
 
     public String getReceiptId() {
         return receiptId;
@@ -27,25 +31,25 @@ public class Receipt {
         this.receiptId = receiptId;
     }
 
-    public String getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
-
-    public String getEmployeeId() {
-        return employeeId;
-    }
-    public void setEmployeeId(String employeeId) {
-        this.employeeId = employeeId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public String getBranchId() {
-        return branchId;
+    public Employee getEmployee() {
+        return employee;
     }
-    public void setBranchId(String branchId) {
-        this.branchId = branchId;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Branch getBranch() {
+        return branch;
+    }
+    public void setBranch(Branch branch) {
+        this.branch = branch;
     }
 
     public Date getDate() {
@@ -60,5 +64,12 @@ public class Receipt {
     }
     public void setTotal(double total) {
         this.total = total;
+    }
+
+    public List<ReceiptDetail> getDetails() {
+        return details;
+    }
+    public void setDetails(List<ReceiptDetail> details) {
+        this.details = details;
     }
 }

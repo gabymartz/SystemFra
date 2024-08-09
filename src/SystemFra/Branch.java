@@ -1,18 +1,19 @@
 package SystemFra;
 
+// Clase Branch (Sucursal)
+
 public class Branch {
     private String branchId;
     private String branchName;
     private String branchAddress;
-    private String cityId;
+    private City city; // Relación con la clase City
 
-    public Branch(String branchId, String branchName, String branchAddress, String cityId) {
+    public Branch(String branchId, String branchName, String branchAddress, City city) {
         this.branchId = branchId;
         this.branchName = branchName;
         this.branchAddress = branchAddress;
-        this.cityId = cityId;
+        this.city = city;
     }
-
 
     public String getBranchId() {
         return branchId;
@@ -35,11 +36,10 @@ public class Branch {
         this.branchAddress = branchAddress;
     }
 
-    public String getCityId() {
-        return cityId;
+    public City getCity() {
+        return city;
     }
-    public void setCityId(String cityId) {
-        this.cityId = cityId;
+    public void setCity(City city) {
+        this.city = city;
     }
 }
-

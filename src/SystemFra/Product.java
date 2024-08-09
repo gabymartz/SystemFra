@@ -1,5 +1,7 @@
 package SystemFra;
 
+// Clase Product (Producto)
+
 public class Product {
     private String productId;
     private String productName;
